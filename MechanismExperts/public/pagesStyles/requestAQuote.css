@@ -1,0 +1,25 @@
+body {
+  background-color: #eee;
+}
+
+.card-0 {
+  min-height: 100vh;
+  background: linear-gradient(-20deg, rgb(255, 255, 255) 50%, #25274d 50%);
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+}
+
+.form-group {
+  margin: 10px;
+}
+
+.btn-clr {
+  background-color: #25274d;
+  color: white;
+}

@@ -1,0 +1,11 @@
+.mainHeading{
+    font-size: 4rem;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    #servicesImg{
+        display: none;
+    }
+  }
