@@ -16,14 +16,15 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="pagesStyles/jumbotron.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- navbar start -->
     <div>
-      <nav class="navbar navbar-expand-lg bg-light nav-style">
+      <nav class="navbar navbar-expand-lg bg-dark nav-style fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand d-lg-none" href="#">
             <img
               class="ps-5"
               height="100px"
@@ -44,10 +45,10 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item WPCUHeading">
                 <a
-                  class="nav-link WPCUHeading px-5 py-1 fw-bold border-bottom"
+                  class="nav-link text-light px-5 py-1 fw-bold border-bottom pt-5"
                   aria-current="page"
                   href="#"
                   >HOME
@@ -70,7 +71,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link WPCUHeading px-5 py-1 fw-bold"
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5"
                   aria-current="page"
                   href="pages/about.html"
                   >ABOUT</a
@@ -78,15 +79,26 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link WPCUHeading px-5 py-1 fw-bold"
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5"
                   aria-current="page"
                   href="pages/services.html"
                   >SERVICES</a
                 >
               </li>
+              <li>
+                <a class="navbar-brand d-none d-lg-block" href="#">
+                  <img
+                    class="ps-5"
+                    height="100px"
+                    width="300px"
+                    src="images/logo/logo.png"
+                    alt=""
+                  />
+                </a>
+              </li>
               <li class="nav-item">
                 <a
-                  class="nav-link WPCUHeading px-5 py-1 fw-bold"
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5"
                   aria-current="page"
                   href="pages/contact.html"
                   >CONTACT</a
@@ -94,10 +106,18 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link WPCUHeading px-5 py-1 fw-bold"
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5"
                   aria-current="page"
                   href="pages/requestAQuote.html"
                   >REQUEST A QUOTE</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5"
+                  aria-current="page"
+                  href="pages/admin.html"
+                  >ADMIN</a
                 >
               </li>
             </ul>
@@ -107,123 +127,86 @@
     </div>
     <!-- navbar end -->
 
+    <br /><br /><br />
+
     <!-- slider start  -->
-    <div class="containerfluid h-25" id="carousel">
-      <div
-        id="carouselExampleCaptions"
-        class="carousel slide"
-        data-bs-ride="false"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              width="100%"
-              height="660px"
-              src="https://www.sheehy.com.au/wp-content/uploads/2021/04/engineering-services-ftr.png"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div
-              class="carousel-caption d-none d-md-block poition-absolute top-0 start-0 end-50"
-            >
-              <h1 class="sliderHeading">
-                Engineering services <br />
-                provided with the best Workforce
-              </h1>
-              <!-- <p>Some representative placeholder content for the first slide.</p> -->
-            </div>
+    <div class="jumboTron">
+      <div class="hero-section">
+        <div class="spotlight-container">
+          <button class="ctrl-right" onclick="switchToNext()">NEXT</button>
+          <button class="ctrl-left" onclick="switchToPrev()">PREV</button>
+          <div class="page-counter">
+            <div class="page-ball active-pb" id="pb-1"></div>
+            <div class="page-ball" id="pb-2"></div>
+            <div class="page-ball" id="pb-3"></div>
           </div>
-          <div class="carousel-item">
-            <img
-              width="100%"
-              height="660px"
-              src="https://images.pexels.com/photos/7359568/pexels-photo-7359568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div
-              class="carousel-caption d-none d-md-block poition-absolute top-50 start-50 end-0"
-            >
-              <h5 class="sliderHeading">Electrical Maintainance Contracts</h5>
-              <!-- <p>Some representative placeholder content for the second slide.</p> -->
-            </div>
+          <div class="timer-bar">
+            <div id="time-bar" class="bar-inner"></div>
           </div>
-          <div class="carousel-item">
-            <img
-              width="100%"
-              height="660px"
-              src="https://img.freepik.com/premium-photo/electrical-engineer-using-digital-multi-meter-checking-electric-current-voltage-circuit-breaker_101448-1293.jpg?w=2000"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div
-              class="carousel-caption d-none d-md-block poition-absolute top-75 start-0 end-50"
-            >
-              <h5 class="sliderHeading">Installation & Service</h5>
-              <!-- <p>Some representative placeholder content for the third slide.</p> -->
+          <div class="slide-container" id="slide-1">
+            <div class="info-area-container">
+              <div class="spacer-div"></div>
+              <div class="info-area" id="info-1">
+                <h1 class="slide-title p-2 sliderHeading">
+                  Engineering services provided with the best Workforce
+                </h1>
+                <h3 class="slide-sub-text p-2">
+                  Mechanism Experts offers the best of the best commercial or
+                  domestic engineering services that you or your company may
+                  need.
+                </h3>
+                <button
+                  onclick="window.location.href = 'pages/services.html'"
+                  class="btn btn-color text-dark m-3 fs-5 px-4 py-2"
+                >
+                  Learn More!
+                </button>
+              </div>
             </div>
+            <div class="slide grayout"></div>
           </div>
-          <div class="carousel-item">
-            <img
-              width="100%"
-              height="660px"
-              src="https://milcom.edu.au/wp-content/uploads/2021/02/cctv.jpg"
-              alt="..."
-            />
-            <div
-              class="carousel-caption d-none d-md-block poition-absolute top-75 start-50 end-00"
-            >
-              <h5 class="sliderHeading">CCTV Installation</h5>
-              <!-- <p>Some representative placeholder content for the third slide.</p> -->
+          <div class="slide-container out-right" id="slide-2">
+            <div class="info-area-container">
+              <div class="spacer-div"></div>
+              <div class="info-area out-fade-down" id="info-2">
+                <h1 class="slide-title p-2 sliderHeading">
+                  Experienced Workers
+                </h1>
+                <h3 class="slide-sub-text p-2 px-4 py-2">
+                  Highly Experienced and field qualified workers
+                </h3>
+                <button
+                  onclick="window.location.href = 'pages/services.html'"
+                  class="btn btn-color text-dark m-3 fs-5 px-4 py-2"
+                >
+                  Learn More!
+                </button>
+              </div>
             </div>
+            <div class="slide-2 darken"></div>
+          </div>
+          <div class="slide-container out-right" id="slide-3">
+            <div class="info-area-container">
+              <div class="spacer-div"></div>
+              <div class="info-area out-fade-down" id="info-3">
+                <h1 class="slide-title p-2 sliderHeading">
+                  Quality Materials and equipment used
+                </h1>
+                <h3 class="slide-sub-text p-2">
+                  Materials form renowned companies are bought and used in your
+                  projects.
+                </h3>
+                <button
+                  onclick="window.location.href = 'pages/services.html'"
+                  class="btn btn-color text-dark m-3 fs-5 px-4 py-2"
+                >
+                  Learn More!
+                </button>
+              </div>
+            </div>
+            <div class="slide-3 tint-blue"></div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </div>
     <!-- slider end  -->
@@ -293,7 +276,7 @@
 
     <!-- services 2 start  -->
     <div class="container">
-      <div class="row">
+      <div class="row border p-2 shadow">
         <div class="col-md-4">
           <div>
             <img
@@ -322,7 +305,7 @@
         </div>
       </div>
       <br /><br />
-      <div class="row">
+      <div class="row border p-2 shadow">
         <div class="col-md-8">
           <h2 class="WPCUHeading">INDUSTRIAL SERVICES</h2>
           <div>
@@ -360,7 +343,7 @@
         </div>
       </div>
       <br /><br />
-      <div class="row">
+      <div class="row border p-2 shadow">
         <div class="col-md-4">
           <div>
             <img
@@ -396,7 +379,7 @@
         </div>
       </div>
       <br /><br />
-      <div class="row">
+      <div class="row border p-2 shadow">
         <div class="col-md-8">
           <h2 class="WPCUHeading">MANAGEMENT SYSTEM SERVICES</h2>
           <div>
@@ -443,56 +426,58 @@
 
     <br /><br />
 
-    <div class="container d-flex justify-content-center">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-5 d-flex justify-content-center">
-          <img
-            id="micr"
-            width="80%"
-            height="80%"
-            src="https://www.pngmart.com/files/4/Microsoft-Logo-PNG-Picture.png"
-            alt=""
-            onmouseenter="imgToGif1()"
-            onmouseleave="gifToImg1()"
-          />
-        </div>
-        <div class="col-md-5 d-flex justify-content-center">
-          <img
-            id="morg"
-            width="80%"
-            height="80%"
-            src="https://logos-world.net/wp-content/uploads/2021/02/JP-Morgan-Chase-Emblem.png"
-            alt=""
-            onmouseenter="imgToGif2()"
-            onmouseleave="gifToImg2()"
-          />
+    <div class="container border p-2 shadow">
+      <div class="container d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-5 d-flex justify-content-center">
+            <img
+              id="micr"
+              width="80%"
+              height="80%"
+              src="https://www.pngmart.com/files/4/Microsoft-Logo-PNG-Picture.png"
+              alt=""
+              onmouseenter="imgToGif1()"
+              onmouseleave="gifToImg1()"
+            />
+          </div>
+          <div class="col-md-5 d-flex justify-content-center">
+            <img
+              id="morg"
+              width="80%"
+              height="80%"
+              src="https://logos-world.net/wp-content/uploads/2021/02/JP-Morgan-Chase-Emblem.png"
+              alt=""
+              onmouseenter="imgToGif2()"
+              onmouseleave="gifToImg2()"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <br /><br /><br />
-    <div class="container d-flex justify-content-center">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-5 d-flex justify-content-center">
-          <img
-            id="efs"
-            height="80%"
-            width="80%"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/EFS_Logo.png/1200px-EFS_Logo.png"
-            alt=""
-            onmouseenter="imgToGif3()"
-            onmouseleave="gifToImg3()"
-          />
-        </div>
-        <div class="col-md-5 d-flex justify-content-center">
-          <img
-            id="affl"
-            width="80%"
-            height="80%"
-            src="https://www.affluxsolutions.com/images/AffluxLogo.jpg"
-            alt=""
-            onmouseenter="imgToGif4()"
-            onmouseleave="gifToImg4()"
-          />
+      <br /><br /><br />
+      <div class="container d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-5 d-flex justify-content-center">
+            <img
+              id="efs"
+              height="80%"
+              width="80%"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/EFS_Logo.png/1200px-EFS_Logo.png"
+              alt=""
+              onmouseenter="imgToGif3()"
+              onmouseleave="gifToImg3()"
+            />
+          </div>
+          <div class="col-md-5 d-flex justify-content-center">
+            <img
+              id="affl"
+              width="80%"
+              height="80%"
+              src="https://www.affluxsolutions.com/images/AffluxLogo.jpg"
+              alt=""
+              onmouseenter="imgToGif4()"
+              onmouseleave="gifToImg4()"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -509,7 +494,7 @@
 
     <br /><br /><br />
 
-    <div class="container">
+    <div class="container border p-2 shadow">
       <div class="row">
         <div class="col-md-4">
           <div class="row">
@@ -832,6 +817,7 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script src="scripts/carousel.js"></script>
     <script type="module" src="app.js"></script>
   </body>
 </html>

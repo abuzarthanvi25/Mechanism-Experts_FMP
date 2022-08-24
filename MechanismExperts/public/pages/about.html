@@ -16,9 +16,9 @@
   <body>
     <!-- navbar start -->
     <div>
-      <nav class="navbar navbar-expand-lg bg-light nav-style">
+      <nav class="navbar navbar-expand-lg bg-dark nav-style fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">
+          <a class="navbar-brand d-lg-none" href="../index.html">
             <img
               class="ps-5"
               height="100px"
@@ -39,10 +39,10 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item WPCUHeading">
                 <a
-                  class="nav-link WPCUHeading px-5 py-1 fw-bold"
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5"
                   aria-current="page"
                   href="../index.html"
                   >HOME
@@ -65,7 +65,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link WPCUHeading px-5 py-1 fw-bold border-bottom"
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5 border-bottom"
                   aria-current="page"
                   href="#"
                   >ABOUT</a
@@ -73,26 +73,45 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link WPCUHeading px-5 py-1 fw-bold"
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5"
                   aria-current="page"
-                  href="../pages/services.html"
+                  href="services.html"
                   >SERVICES</a
                 >
               </li>
+              <li>
+                <a class="navbar-brand d-none d-lg-block" href="../index.html">
+                  <img
+                    class="ps-5"
+                    height="100px"
+                    width="300px"
+                    src="../images/logo/logo.png"
+                    alt=""
+                  />
+                </a>
+              </li>
               <li class="nav-item">
                 <a
-                  class="nav-link WPCUHeading px-5 py-1 fw-bold"
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5"
                   aria-current="page"
-                  href="../pages/contact.html"
+                  href="contact.html"
                   >CONTACT</a
                 >
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link WPCUHeading px-5 py-1 fw-bold"
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5"
                   aria-current="page"
-                  href="../pages/requestAQuote.html"
+                  href="requestAQuote.html"
                   >REQUEST A QUOTE</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light px-5 py-1 fw-bold pt-5"
+                  aria-current="page"
+                  href="admin.html"
+                  >ADMIN</a
                 >
               </li>
             </ul>
@@ -102,8 +121,11 @@
     </div>
     <!-- navbar end -->
 
+    <span id="gap"><br /><br /><br /><br /><br /><br /><br /></span>
+
     <!-- history and philosophy start  -->
     <img
+      class="responsiveImg"
       height="800px"
       width="100%"
       src="https://wallpaperaccess.com/full/1944457.jpg"
@@ -117,7 +139,7 @@
       <hr style="border: 2px solid #00227c" width="50%" />
     </div>
     <br />
-    <div class="container">
+    <div class="container border p-3 shadow">
       <p class="fs-5">
         <b> MECHANISM EXPERTS </b> began as a general works contractor in 2017.
         Over the years, the group has undertaken many challenging projects and
@@ -174,7 +196,7 @@
       <hr style="border: 2px solid #00227c" width="50%" />
     </div>
 
-    <div class="container">
+    <div class="container border p-3 shadow">
       <p class="fs-5">
         The business is driven by our working directors; collectively they
         accumulated more than 20years of working experience in the different
@@ -197,7 +219,7 @@
       <hr style="border: 2px solid #00227c" width="50%" />
     </div>
 
-    <div class="container">
+    <div class="container border p-3 shadow">
       <p class="fs-5">
         Our peoples are crucial in the delivery of our services and solutions to
         our clients. In order to ensure that everyone is equipped with the right
@@ -216,7 +238,7 @@
       <hr style="border: 2px solid #00227c" width="50%" />
     </div>
 
-    <div class="container">
+    <div class="container border p-3 shadow">
       <div class="row">
         <div class="col-md-3">
           <div>
@@ -366,22 +388,24 @@
 
     <br />
 
-    <div class="container">
-      <h3 class="text-center WPCUHeading text-uppercase">
-        <q>
-          To be respectable contractor delivering beyond expectation, always.
-        </q>
-        <br /><br />
-      </h3>
-    </div>
+    <div class="p-2">
+      <div class="container">
+        <h3 class="text-center WPCUHeading text-uppercase">
+          <q>
+            To be respectable contractor delivering beyond expectation, always.
+          </q>
+          <br /><br />
+        </h3>
+      </div>
 
-    <div class="d-flex justify-content-center">
-      <img
-        width="10%"
-        src="https://seeklogo.com/images/G/google-verified-logo-A2EAA633D0-seeklogo.com.png"
-        alt=""
-      />
-      <br />
+      <div class="d-flex justify-content-center">
+        <img
+          width="10%"
+          src="https://seeklogo.com/images/G/google-verified-logo-A2EAA633D0-seeklogo.com.png"
+          alt=""
+        />
+        <br />
+      </div>
     </div>
     <!-- our vision end  -->
 
@@ -395,7 +419,7 @@
 
     <br />
 
-    <div class="container">
+    <div class="container p-2">
       <h3 class="text-center WPCUHeading text-uppercase">
         <q>
           To procure projects at competitive pricing, provides working
@@ -405,6 +429,7 @@
       <div class="d-flex justify-content-center" id="ourMissionParent">
         <img
           id="missionImg"
+          class="responsiveImg"
           onmouseover="imgFunc()"
           onmouseout="imgFunc2()"
           src="https://images.squarespace-cdn.com/content/v1/5c61bee2aadd34569999a5cc/1552526618450-8AD8XKRO45TCUTRT483B/s4t-icons-job-seeker-services-offer-price.png?format=1000w"

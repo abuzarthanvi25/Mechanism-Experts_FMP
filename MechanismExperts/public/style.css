@@ -1,14 +1,6 @@
 .nav-style {
   font-family: "Open Sans", sans-serif;
 }
-
-.sliderHeading {
-  font-size: 3rem;
-  font-weight: bolder;
-  color: white;
-  background-color: #f1c125;
-}
-
 /* /* CARD SLIDER  ================================================================== */
 
 .main {
@@ -240,20 +232,20 @@
   }
 }
 
-.footHeading{
+.footHeading {
   color: #f1c125;
 }
 
 /* media queryies  */
 
 @media screen and (max-width: 900px) {
-    #carousel{
-      width: 100%;
-      height: 100%;
-    }
+  #carousel {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.imgs:hover{
+.imgs:hover {
   transform: scale(1.2);
   transition: 0.6s;
 }
@@ -263,5 +255,17 @@
   bottom: 80px;
   right: 30px;
   display: none;
-  background-color: #00227c
+  background-color: #00227c;
+}
+
+@media only screen and (max-width: 800px) {
+  .responsiveImg {
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #gap {
+    display: none;
+  }
 }
