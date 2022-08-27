@@ -113,70 +113,94 @@ window.getQuoteData = function () {
     for (var i = 0; i < quoteData.length; i++) {
       dataParent.innerHTML += `
          <div class = 'p-5 mb-5 border border-3 border-warning'>
-                <h2 class = 'text-center text-warning'>Quote Number: <span class = "text-success fw-bolder">${i}</span></h2>
+                <h2 class = 'text-center text-warning'>Quote Number: <span class = "text-success fw-bolder">${
+                  i + 1
+                }</span></h2>
                 <li class = 'my-1 border-bottom border-primary border-opacity-25'>
                 <p class = 'fs-5'>
-                    <b class = 'text-primary'> First Name: </b> <span class = 'px-2 text-white'>${quoteData[i].firstName}</span>
+                    <b class = 'text-primary'> First Name: </b> <span class = 'px-2 text-white'>${
+                      quoteData[i].firstName
+                    }</span>
                 </p>
             </li>
             <br>
             <li class = 'my-1 border-bottom border-primary border-opacity-25'>
                 <p class = 'fs-5'>
-                <b class = 'text-primary'> Last Name: </b> <span class = 'px-2 text-white'>${quoteData[i].lastName}</span>
+                <b class = 'text-primary'> Last Name: </b> <span class = 'px-2 text-white'>${
+                  quoteData[i].lastName
+                }</span>
                 </p>
             </li>
             <br>
             <li class = 'my-1 border-bottom border-primary border-opacity-25'>
                 <p class = 'fs-5'>
-                <b class = 'text-primary'> Contact Number: </b> <span class = 'px-2 text-white'>${quoteData[i].mobileNumber}</span>
+                <b class = 'text-primary'> Contact Number: </b> <span class = 'px-2 text-white'>${
+                  quoteData[i].mobileNumber
+                }</span>
                 </p>
             </li>
             <br>
             <li class = 'my-1 border-bottom border-primary border-opacity-25'>
                 <p class = 'fs-5'>
-                    <b class = 'text-primary'> Email: </b><span class = 'px-2 text-white'>${quoteData[i].email}</span>
+                    <b class = 'text-primary'> Email: </b><span class = 'px-2 text-white'>${
+                      quoteData[i].email
+                    }</span>
                 </p>
             </li>
             <br>
             <li class = 'my-1 border-bottom border-primary border-opacity-25'>
                 <p class = 'fs-5'>
-                    <b class = 'text-primary'> Project Type: </b> <span class = 'px-2 text-white'>${quoteData[i].projectType}</span>
+                    <b class = 'text-primary'> Project Type: </b> <span class = 'px-2 text-white'>${
+                      quoteData[i].projectType
+                    }</span>
                 </p>
             </li>
             <br>
             <li class = 'my-1 border-bottom border-primary border-opacity-25'>
                 <p class = 'fs-5'>
-                    <b class = 'text-primary'> Estimated Budget: </b> <span class = 'px-2 text-white'>${quoteData[i].budget}</span>
+                    <b class = 'text-primary'> Estimated Budget: </b> <span class = 'px-2 text-white'>${
+                      quoteData[i].budget
+                    }</span>
                 </p>
             </li>
             <br>
             <li class = 'my-1 border-bottom border-primary border-opacity-25'>
                 <p class = 'fs-5'>
-                    <b class = 'text-primary'> Maximum Allotted Time: </b> <span class = 'px-2 text-white'>${quoteData[i].maxTime}</span>
+                    <b class = 'text-primary'> Maximum Allotted Time: </b> <span class = 'px-2 text-white'>${
+                      quoteData[i].maxTime
+                    }</span>
                 </p>
             </li>
             <br>
             <li class = 'my-1 border-bottom border-primary border-opacity-25'>
                 <p class = 'fs-5'>
-                    <b class = 'text-primary'> Skillset Needed: </b> <span class = 'px-2 text-white'>${quoteData[i].skill}</span>
+                    <b class = 'text-primary'> Skillset Needed: </b> <span class = 'px-2 text-white'>${
+                      quoteData[i].skill
+                    }</span>
                 </p>
             </li>
             <br>
             <li class = 'my-1 border-bottom border-primary border-opacity-25'>
                 <p class = 'fs-5'>
-                    <b class = 'text-primary'> Country: </b> <span class = 'px-2 text-white'>${quoteData[i].country}</span>
+                    <b class = 'text-primary'> Country: </b> <span class = 'px-2 text-white'>${
+                      quoteData[i].country
+                    }</span>
                 </p>
             </li>
             <br>
             <li class = 'my-1 border-bottom border-primary border-opacity-25'>
                 <p class = 'fs-5'>
-                    <b class = 'text-primary'> Requirements File: </b> <span class = 'px-2 text-white'>${quoteData[i].reqFile}</span>
+                    <b class = 'text-primary'> Requirements File: </b> <span class = 'px-2 text-white'>${
+                      quoteData[i].reqFile
+                    }</span>
                 </p>
             </li>
             <br>
             <li class = 'my-1 border-bottom border-primary border-opacity-25 mb-5'>
                 <p class = 'fs-5'>
-                    <b class = 'text-primary'> Message: </b> <span class = 'px-2 text-white'>${quoteData[i].message}</span>
+                    <b class = 'text-primary'> Message: </b> <span class = 'px-2 text-white'>${
+                      quoteData[i].message
+                    }</span>
                 </p>
             </li>
          </div>
